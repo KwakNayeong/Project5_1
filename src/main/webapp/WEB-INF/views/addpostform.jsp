@@ -26,20 +26,19 @@
         }
     </style>
 </head>
+</head>
 <body>
-
-<h1>Add New Post</h1>
-<form action="addok" method="post">
-    <table id="edit">
-        <tr><td>Category:</td><td><input type="text" name="category"/></td></tr>
-        <tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
-        <tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
-        <tr><td>Content:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
-        <tr><td colspan="2"><a href="list">View All Records</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="submit" value="Add Post"/></td> </tr>
-    </table>
-</form>
-<br>
-
+    <h1>Add New Movie</h1>
+    <form action="addmovie.jsp" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        <!-- Other fields for movie details -->
+        <label for="director">Director:</label>
+        <input type="text" id="director" name="director" required><br><br>
+        <label for="summary">Summary:</label><br>
+        <textarea id="summary" name="summary" rows="4" cols="50"></textarea><br><br>
+        <!-- Add more fields for movie details -->
+        <input type="submit" value="Add Movie">
+    </form>
 </body>
 </html>
