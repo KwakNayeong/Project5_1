@@ -37,32 +37,29 @@
     </script>
 </head>
 <body>
-<h1>자유게시판</h1>
-
-<table id="list" width="90%">
-    <tr>
-        <th>Id</th>
-        <th>Category</th>
-        <th>Title</th>
-        <th>Writer</th>
-
-        <th>Regdate</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
-    <c:forEach items="${list}" var="u">
+    <h1>Movie List</h1>
+    <table border="1">
         <tr>
-            <td>${u.seq}</td>
-            <td>${u.category}</td>
-            <td><a href="view/${u.seq}">${u.title}</a></td>
-            <td>${u.writer}</td>
-
-            <td>${u.regdate}</td>
-            <td><a href="editform/${u.seq}">Edit</a></td>
-            <td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Summary</th>
+            <!-- Add more columns for movie details -->
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
-    </c:forEach>
-</table>
-<br/><a href="add">Add New Post</a>
+        <!-- Loop through movies retrieved from the database and display them -->
+        <!-- Example: -->
+        <tr>
+            <td>1</td>
+            <td>Movie Title 1</td>
+            <td>Director 1</td>
+            <td>Summary 1</td>
+            <!-- Display more movie details -->
+            <td><a href="editform.jsp?id=1">Edit</a></td>
+            <td><a href="delete.jsp?id=1">Delete</a></td>
+        </tr>
+        <!-- Add more rows for other movies -->
+    </table>
 </body>
 </html>
